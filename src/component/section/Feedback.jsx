@@ -73,14 +73,15 @@ export default function Feedback() {
             </div>
             
             {isSubmit ? (
-                <Alert type="success" classes="d-flex align-items-center justify-content-center">
+                <Alert type="success" classes="d-flex align-items-center justify-content-center mt-2">
                     <FaceGrinning className="me-2" size={40}/>
                     <h3>Grazie per il tuo feedback!</h3>
                 </Alert>
             ) : (
             
             <textarea 
-                className="form-control w-75 mx-auto mt-2" 
+                className="form-control w-75 mx-auto mt-4" 
+                placeholder="Inserisci qui il tuo feedback..."
                 value={feedBack.feedback} 
                 onChange={(e) => setFeedBack({ feedback: e.target.value })}  
                 rows="3">
