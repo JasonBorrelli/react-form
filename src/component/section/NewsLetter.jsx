@@ -12,6 +12,17 @@ const initialState = {
 
 export default function NewsLetter() {
 
+    const [state, setState] = useState(initialState);
+
+    const handleSumbit = (e) => {
+        e.preventDefault()
+        setState(initialState)
+    }
+
+    const handleFields = (e) => {
+        const { name, value } = e.target 
+        setState(active => ({ ...active, [name]: value }))
+    }
 
 
 
@@ -28,7 +39,8 @@ export default function NewsLetter() {
                     type="text"
                     id="name" 
                     name="name" 
-                    value="" 
+                    value={state.name}
+                    onChange={handleFields}
                     className="form-control"/>
                 </div>
                 <div className="mb-3">
@@ -40,7 +52,8 @@ export default function NewsLetter() {
                     type="text"
                     id="surname" 
                     name="surname" 
-                    value="" 
+                    value={state.surname}
+                    onChange={handleFields}
                     className="form-control"/>
                 </div>
                 <div className="mb-3">
@@ -52,10 +65,15 @@ export default function NewsLetter() {
                     type="email"
                     id="email" 
                     name="email" 
-                    value="" 
+                    value={state.email}
+                    onChange={handleFields}
                     className="form-control"/>
                 </div>
-
+        <Button
+            children= "Iscriviti"
+            className= "btn btn-primary"
+            onClick= {handleSumbit}
+        />
 
 
                 
