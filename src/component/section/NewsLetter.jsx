@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Button from "../ui/Button.jsx"
+import Alert from "../ui/alert.jsx"
 
 
 const initialState = {
@@ -12,6 +13,8 @@ const initialState = {
 
 export default function NewsLetter() {
 
+   
+
     const [state, setState] = useState(initialState);
 
     const handleSumbit = (e) => {
@@ -23,13 +26,24 @@ export default function NewsLetter() {
         const { name, value } = e.target 
         setState(active => ({ ...active, [name]: value }))
     }
+ const [isSubmit, setIsSubmit] = useState(false); 
 
 
 
     return (
+
+
         <section className="m-4">
             <h2 className="text-center">Iscriviti alla NewsLetter</h2>
-            <form> 
+
+            { isSubmit && 
+                <Alert type="success">
+                    <h3>Grazie per la tua iscrizione!</h3>
+                </Alert> 
+            }
+
+            
+            <form onSubmit={handleSumbit} setIsSubmit={setIsSubmit}>
                 <div className="mb-3">
                     <label 
                     htmlFor="name"
