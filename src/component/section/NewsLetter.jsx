@@ -1,6 +1,8 @@
 import { useState } from "react"
 import Button from "../ui/Button.jsx"
 import Alert from "../ui/alert.jsx"
+import { ThumbsUpIcon } from "lucide-react";
+import { FaceGrinning } from "lucide-react";
 
 
 const initialState = {
@@ -39,8 +41,10 @@ export default function NewsLetter() {
             <h2 className="text-center">Iscriviti alla NewsLetter</h2>
 
             { isSubmit ? (
-                <Alert type="success">
-                    <h3>Grazie per la tua iscrizione!</h3>
+                <Alert classes="d-flex justify-content-center align-items-center P" type="success">
+                   <FaceGrinning size={50} className="me-2"/>                  
+                   <h3 className="">Grazie per la tua iscrizione!</h3>
+                  
                 </Alert> 
             ) : (
            
