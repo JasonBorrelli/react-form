@@ -20,78 +20,80 @@ export default function NewsLetter() {
     const handleSumbit = (e) => {
         e.preventDefault()
         setState(initialState)
+        setIsSubmit(true)
     }
 
     const handleFields = (e) => {
         const { name, value } = e.target 
         setState(active => ({ ...active, [name]: value }))
     }
- const [isSubmit, setIsSubmit] = useState(false); 
+    
+    const [isSubmit, setIsSubmit] = useState(false); 
 
 
-
+ 
     return (
 
 
         <section className="m-4">
             <h2 className="text-center">Iscriviti alla NewsLetter</h2>
 
-            { isSubmit && 
+            { isSubmit ? (
                 <Alert type="success">
                     <h3>Grazie per la tua iscrizione!</h3>
                 </Alert> 
-            }
+            ) : (
+           
+                <form onSubmit={handleSumbit}>
+                    <div className="mb-3">
+                        <label 
+                        htmlFor="name"
+                        className="form-label"
+                        >Nome</label>
+                        <input 
+                        type="text"
+                        id="name" 
+                        name="name" 
+                        value={state.name}
+                        onChange={handleFields}
+                        className="form-control"/>
+                    </div>
+                    <div className="mb-3">
+                        <label 
+                        htmlFor="surname"
+                        className="form-label"
+                        >Cognome</label>
+                        <input 
+                        type="text"
+                        id="surname" 
+                        name="surname" 
+                        value={state.surname}
+                        onChange={handleFields}
+                        className="form-control"/>
+                    </div>
+                    <div className="mb-3">
+                        <label 
+                        htmlFor="email"
+                        className="form-label"
+                        >Email</label>
+                        <input 
+                        type="email"
+                        id="email" 
+                        name="email" 
+                        value={state.email}
+                        onChange={handleFields}
+                        className="form-control"/>
+                    </div>
+                    <Button
+                    children= "Iscriviti"
+                    className= "btn btn-primary"
+                    onClick= {handleSumbit}
+                    />
 
-            
-            <form onSubmit={handleSumbit} setIsSubmit={setIsSubmit}>
-                <div className="mb-3">
-                    <label 
-                    htmlFor="name"
-                    className="form-label"
-                    >Nome</label>
-                    <input 
-                    type="text"
-                    id="name" 
-                    name="name" 
-                    value={state.name}
-                    onChange={handleFields}
-                    className="form-control"/>
-                </div>
-                <div className="mb-3">
-                    <label 
-                    htmlFor="surname"
-                    className="form-label"
-                    >Cognome</label>
-                    <input 
-                    type="text"
-                    id="surname" 
-                    name="surname" 
-                    value={state.surname}
-                    onChange={handleFields}
-                    className="form-control"/>
-                </div>
-                <div className="mb-3">
-                    <label 
-                    htmlFor="email"
-                    className="form-label"
-                    >Email</label>
-                    <input 
-                    type="email"
-                    id="email" 
-                    name="email" 
-                    value={state.email}
-                    onChange={handleFields}
-                    className="form-control"/>
-                </div>
-        <Button
-            children= "Iscriviti"
-            className= "btn btn-primary"
-            onClick= {handleSumbit}
-        />
 
-
-                
-            </form>
+                    
+                </form>
+            )}  
         </section>
     )
 }
