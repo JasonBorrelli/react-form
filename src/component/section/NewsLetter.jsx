@@ -1,7 +1,6 @@
 import { useState } from "react"
 import Button from "../ui/Button.jsx"
 import Alert from "../ui/alert.jsx"
-import { ThumbsUpIcon } from "lucide-react";
 import { FaceGrinning } from "lucide-react";
 
 
@@ -48,7 +47,7 @@ export default function NewsLetter() {
                 </Alert> 
             ) : (
            
-                <form onSubmit={handleSumbit}>
+                <form onSubmit={handleSumbit} className=" container w-25 mx-auto mt-4">
                     <div className="mb-3">
                         <label 
                         htmlFor="name"

@@ -80,7 +80,7 @@ export default function Feedback() {
             ) : (
             
             <textarea 
-                className="form-control w-75 mx-auto mt-4" 
+                className="form-control w-50 mx-auto mt-4" 
                 placeholder="Inserisci qui il tuo feedback..."
                 value={feedBack.feedback} 
                 onChange={(e) => setFeedBack({ feedback: e.target.value })}  
