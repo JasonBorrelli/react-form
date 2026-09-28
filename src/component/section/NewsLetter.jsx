@@ -42,7 +42,7 @@ export default function NewsLetter() {
 
             { isSubmit ? (
                 <Alert classes="d-flex justify-content-center align-items-center P" type="success">
-                   <FaceGrinning size={50} className="me-2"/>                  
+                   <FaceGrinning size={40} className="me-2"/>                  
                    <h3 className="">Grazie per la tua iscrizione!</h3>
                   
                 </Alert> 
