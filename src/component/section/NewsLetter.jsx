@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Button from "../ui/Button.jsx"
-import Alert from "../ui/alert.jsx"
+import Alert from "../ui/Alert.jsx"
 import { FaceGrinning } from "lucide-react";
 
 
@@ -36,7 +36,7 @@ export default function NewsLetter() {
     return (
 
 
-        <section className="m-4">
+        <section className="m-4 bg-success-subtle p-2">
             <h2 className="text-center">Iscriviti alla NewsLetter</h2>
 
             { isSubmit ? (

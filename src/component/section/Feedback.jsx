@@ -1,7 +1,7 @@
 import { Star } from "lucide-react";
 import Button from "../ui/Button.jsx";
 import { useState } from "react";
-import Alert from "../ui/alert.jsx";
+import Alert from "../ui/Alert.jsx";
 import { FaceGrinning } from "lucide-react";
 
 const initialState = {
@@ -28,7 +28,7 @@ export default function Feedback() {
     
     return (
 
-        <form onSubmit={handleSumbit} className="m-4 text-center">
+        <form onSubmit={handleSumbit} className="m-4 text-center bg-info-subtle p-2">
             <h3 className="text-center">Lascia il tuo feedback</h3>
             <div className="d-flex justify-content-center align-items-center gap-2">
                 {[1, 2, 3, 4, 5].map((star) => {
