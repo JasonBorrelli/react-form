@@ -13,10 +13,10 @@ export default function MainContent() {
                 <CodicePromo />
             </section>
             <section>
-                <Feedback />
+                <Booking />
             </section>
             <section>
-                <Booking />
+                <Feedback />
             </section>
         </main>
     )

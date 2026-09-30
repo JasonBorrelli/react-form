@@ -5,27 +5,25 @@ import { Smile } from "lucide-react";
 
 
 
-const codiciSconto = [
-    {
-        codice: "SCONTO10",
-        valore: 10
-    },
-    {
-        codice: "SCONTO20",
-        valore: 20
-    },
-    {
-        codice: "SCONTO30",
-        valore: 30
-    }
-]   
+const codiciSconto = [{
+    codice: "SCONTO10",
+    valore: "10%"
+},
+{
+    codice: "SCONTO20",
+    valore: "20%"
+},
+{
+    codice: "SCONTO30",
+    valore: "30%"
+}]
 
 
 
 
 
 export default function CodicePromo() {
-    
+    const [scontoApplicato, setScontoApplicato] = useState(null)
     const [codePromo, setCodePromo] = useState('')
     const [isSubmit, setIsSubmit] = useState(false)
 
@@ -35,8 +33,13 @@ export default function CodicePromo() {
 
     const handleSumbit = (e) => {
         e.preventDefault()
-        if(codiciSconto.some((codice) => codice.codice === codePromo.trim().toUpperCase())) {
+        const foundSconto = codiciSconto.find((sconto) => sconto.codice === codePromo.trim().toUpperCase())
+        if(foundSconto) {
+            setScontoApplicato(foundSconto)
             setIsSubmit(true)
+        }
+        else if(codePromo.trim() === "") {
+            alert("Per favore, inserisci un codice sconto")
         }
         else {
             alert("Codice sconto non valido")
@@ -47,6 +50,7 @@ export default function CodicePromo() {
     const handleReset = () => {
         setIsSubmit(false)
         setCodePromo('')
+        setScontoApplicato(null)
     }    
     
   
@@ -58,7 +62,8 @@ export default function CodicePromo() {
       classes="d-flex align-items-center justify-content-center mt-2"
     >
       <Smile size={40} className="me-2" />
-      <h3>Codice sconto: {codePromo} applicato</h3>
+      <h3>Sconto del {scontoApplicato.valore} applicato con successo</h3>
+  
       <Button onClick={handleReset} className="btn btn-primary m-2 ">
         Applicca un altro codice sconto
       </Button>
