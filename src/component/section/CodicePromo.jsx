@@ -65,7 +65,7 @@ export default function CodicePromo() {
       <h3>Sconto del {scontoApplicato.valore} applicato con successo</h3>
   
       <Button onClick={handleReset} className="btn btn-primary m-2 bor ">
-        Applicca un altro codice sconto
+        Applica un altro codice sconto
       </Button>
     </Alert>
   ) : (
