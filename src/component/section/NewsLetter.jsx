@@ -36,7 +36,7 @@ export default function NewsLetter() {
     return (
 
 
-        <section className="m-4 bg-success-subtle p-2">
+        <section className="m-4 bg-success-subtle p-2 border rounded-3 border-secondary-subtle shadow-sm">
             <h2 className="text-center">Iscriviti alla NewsLetter</h2>
 
             { isSubmit ? (

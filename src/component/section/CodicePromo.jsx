@@ -61,15 +61,15 @@ export default function CodicePromo() {
       type="success"
       classes="d-flex align-items-center justify-content-center mt-2"
     >
-      <Smile size={40} className="me-2" />
+      <Smile size={40} className="me-2 " />
       <h3>Sconto del {scontoApplicato.valore} applicato con successo</h3>
   
-      <Button onClick={handleReset} className="btn btn-primary m-2 ">
+      <Button onClick={handleReset} className="btn btn-primary m-2 bor ">
         Applicca un altro codice sconto
       </Button>
     </Alert>
   ) : (
-    <section className="m-4 bg-light p-2">
+    <section className="m-4  p-2 m-4 bg-light p-2 border rounded-3 border-light shadow-sm border-2 rounded-3">
       <h2 className="text-center mb-3 text-info fw-bold">Riscatta il tuo codice sconto</h2>
       <p className="text-center mb-3 ">
         Inserisci il codice sconto per ottenere uno sconto sul tuo acquisto

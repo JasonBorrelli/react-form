@@ -29,7 +29,7 @@ export default function Feedback() {
     
     return (
 
-        <form onSubmit={handleSumbit} className="m-4 text-center bg-info-subtle p-2">
+        <form onSubmit={handleSumbit} className="m-4 text-center bg-info-subtle p-2 border rounded-3 border-info-subtle shadow-sm ">
             <h3 className="text-center">Lascia il tuo feedback</h3>
             <div className="d-flex justify-content-center align-items-center gap-2">
                 {[1, 2, 3, 4, 5].map((star) => {

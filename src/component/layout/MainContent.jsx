@@ -5,7 +5,7 @@ import Booking from "../section/Booking.jsx"
 
 export default function MainContent() {
     return (
-        <main>
+        <main className="maincontent container bg-body-secondary p-2 my-5 shadow-lg rounded-4 border border-secondary-subtle">  
             <section>
                 <NewsLetter />
             </section>
