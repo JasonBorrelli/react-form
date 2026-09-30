@@ -19,11 +19,12 @@ export default function Feedback() {
         e.preventDefault();
         if (rating === 0) {
            alert("Per favore, inserisci un voto")
+        } else {
+            setHover(0)
+            setFeedBack(initialState)
+            setIsSubmit(true);
         }
         
-        setHover(0)
-        setFeedBack(initialState)
-        setIsSubmit(true);
     }
     
     return (

@@ -92,9 +92,6 @@ export default function NewsLetter() {
                     className= "btn btn-primary"
                     onClick= {handleSumbit}
                     />
-
-
-                    
                 </form>
             )}  
         </section>
