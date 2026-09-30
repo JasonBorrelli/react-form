@@ -76,7 +76,7 @@ export default function CodicePromo() {
       </p>
       <form onSubmit={handleSumbit} className="container w-50 mx-auto mt-4">
         <div className="mb-3 d-flex justify-content-between align-items-center">
-          <label htmlFor="codice" className="form-label d-block text-center">
+          <label htmlFor="codice" className="form-label d-block text-center fw-bold">
             Codice Sconto
           </label>
           <input 

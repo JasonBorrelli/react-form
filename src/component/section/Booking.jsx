@@ -96,7 +96,7 @@ const [state, setState] = useState(initialState)
                     </div>
                     <Button
                     children= "Prenota"
-                    className= "btn btn-primary"
+                    className= "btn btn-primary d-block mx-auto"
                     type= "submit"
                     />
                 </form>          

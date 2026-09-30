@@ -89,7 +89,7 @@ export default function NewsLetter() {
                     </div>
                     <Button
                     children= "Iscriviti"
-                    className= "btn btn-primary"
+                    className= "btn btn-primary d-block mx-auto"
                     onClick= {handleSumbit}
                     />
                 </form>

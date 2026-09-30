@@ -65,7 +65,7 @@ export default function Feedback() {
                                 size={32}
                                 fill={isFilled ? "#f59e0b" : "transparent"}
                                 stroke={isFilled ? "#f59e0b" : "#1f2937"}
-                                strokeWidth={1.5}
+                                strokeWidth={1.2}
                                 style={{ transition: "all 0.15s ease" }}
                                 />
                             </label>
