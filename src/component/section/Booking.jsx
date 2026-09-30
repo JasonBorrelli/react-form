@@ -40,7 +40,7 @@ const [state, setState] = useState(initialState)
     return ( 
 
 
-        <section className="m-4 bg-success-subtle p-2 border rounded-3 border-secondary-subtle shadow-sm-4 bg-success-subtle p-2">
+        <section className="m-4 bg-warning-subtle p-2 border rounded-3 border-warning-subtle shadow-sm-4 bg-success-subtle p-2">
             <h2 className="text-center">Prenota il tuo tavolo</h2>
 
             { isBookingComplete ? ( 
