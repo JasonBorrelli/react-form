@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Alert from "../ui/Alert.jsx"
 import Button from "../ui/Button.jsx";
-import { Smile } from "lucide-react";
+import { TicketPercent } from "lucide-react";
 
 
 
@@ -61,7 +61,7 @@ export default function CodicePromo() {
       type="success"
       classes="d-flex align-items-center justify-content-center m-4"
     >
-      <Smile size={40} className="me-2 " />
+      <TicketPercent size={50} className="me-2 " />
       <h3>Sconto del {scontoApplicato.valore} applicato con successo</h3>
   
       <Button onClick={handleReset} className="btn btn-primary m-2 bor ">
