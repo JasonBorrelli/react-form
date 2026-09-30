@@ -23,6 +23,7 @@ export default function Feedback() {
             setHover(0)
             setFeedBack(initialState)
             setIsSubmit(true);
+            
         }
         
     }
@@ -74,7 +75,7 @@ export default function Feedback() {
             </div>
             
             {isSubmit ? (
-                <Alert type="success" classes="d-flex align-items-center justify-content-center mt-2">
+                <Alert type="success" classes="d-flex align-items-center justify-content-center m-4 w-50 mx-auto">
                     <FaceGrinning className="me-2" size={40}/>
                     <h3>Grazie per il tuo feedback!</h3>
                 </Alert>
@@ -89,7 +90,9 @@ export default function Feedback() {
             </textarea>
             )}
 
-            <Button onClick={handleSumbit} type="submit" className="btn btn-primary  mt-4 d-block mx-auto">Invia</Button>
+            <Button 
+             type="submit" 
+             className="btn btn-primary  mt-4 d-block mx-auto">Invia</Button>
         </form>
     )
 }       

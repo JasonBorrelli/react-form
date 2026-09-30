@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Button from "../ui/Button"
 import Alert from "../ui/Alert"
+import { BookmarkCheck } from "lucide-react"
 
 const initialState = {
     name: '',
@@ -46,9 +47,9 @@ const [state, setState] = useState(initialState)
             { isBookingComplete ? ( 
                 <Alert
                     type="success"
-                    className="mt-2 container w-25 text-center">
-                    <h3 className="text-center">Prenotazione completata</h3>
-                    <h6 className="text-center">Riepilogo prenotazione:</h6>
+                    classes="m-4 w-25 mx-auto">
+                    <h3 className="text-center">  <BookmarkCheck size={50} className="m-3 "/></h3>
+                    <h4 className="text-center mb-3">Riepilogo prenotazione:</h4>
                     <p className="mb-1 text-center">Nome: {state.name}</p>
                     <p className="mb-1 text-center">Numero di persone: {state.number_of_people}</p>
                     <p className="mb-1 text-center">Data: {state.date}</p>
@@ -75,7 +76,7 @@ const [state, setState] = useState(initialState)
                         className="form-label"
                         >Numero di persone</label>
                         <input 
-                        type="number"
+                        type="text"
                         id="number-of-people" 
                         name="number_of_people" 
                         value={state.number_of_people}

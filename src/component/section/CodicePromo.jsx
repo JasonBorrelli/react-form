@@ -33,7 +33,7 @@ export default function CodicePromo() {
 
     const handleSumbit = (e) => {
         e.preventDefault()
-        const foundSconto = codiciSconto.find((sconto) => sconto.codice === codePromo.trim().toUpperCase())
+        const foundSconto = codiciSconto.find((sconto) => sconto.codice ===  codePromo.trim().toUpperCase())
         if(foundSconto) {
             setScontoApplicato(foundSconto)
             setIsSubmit(true)
@@ -59,7 +59,7 @@ export default function CodicePromo() {
    return isSubmit ? (
     <Alert
       type="success"
-      classes="d-flex align-items-center justify-content-center mt-2"
+      classes="d-flex align-items-center justify-content-center m-4"
     >
       <Smile size={40} className="me-2 " />
       <h3>Sconto del {scontoApplicato.valore} applicato con successo</h3>

@@ -20,8 +20,12 @@ export default function NewsLetter() {
 
     const handleSumbit = (e) => {
         e.preventDefault()
-        setState(initialState)
-        setIsSubmit(true)
+        if (state.name === "" || state.surname === "" || state.email === "") {
+            alert("Per favore, inserisci tutti i campi")
+        } else {
+            setState(initialState)
+            setIsSubmit(true)
+        }
     }
 
     const handleFields = (e) => {
@@ -40,7 +44,7 @@ export default function NewsLetter() {
             <h2 className="text-center">Iscriviti alla NewsLetter</h2>
 
             { isSubmit ? (
-                <Alert classes="d-flex justify-content-center align-items-center P" type="success">
+                <Alert classes="d-flex justify-content-center align-items-center m-4 w-50 mx-auto" type="success">
                    <FaceGrinning size={40} className="me-2"/>                  
                    <h3 className="">Grazie per la tua iscrizione!</h3>
                   
