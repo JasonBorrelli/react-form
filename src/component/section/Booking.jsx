@@ -47,10 +47,11 @@ const [state, setState] = useState(initialState)
                 <Alert
                     type="success"
                     className="mt-2 container w-25 text-center">
-                    <h4 className="text-center">Prenotazione completata</h4>
-                    <p>Nome: {state.name}</p>
-                    <p>Numero di persone: {state.number_of_people}</p>
-                    <p>Data: {state.date}</p>
+                    <h3 className="text-center">Prenotazione completata</h3>
+                    <h6 className="text-center">Riepilogo prenotazione:</h6>
+                    <p className="mb-1 text-center">Nome: {state.name}</p>
+                    <p className="mb-1 text-center">Numero di persone: {state.number_of_people}</p>
+                    <p className="mb-1 text-center">Data: {state.date}</p>
                     
                     </Alert>
                 ) : (
